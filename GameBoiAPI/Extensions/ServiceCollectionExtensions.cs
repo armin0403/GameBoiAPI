@@ -57,6 +57,7 @@ namespace GameBoiAPI.Extensions
             services.AddScoped<ICurrentUserService, CurrentUserService>();
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<IProfileService, ProfileService>();
+            services.AddScoped<IPhotoService, PhotoService>();
             services.AddScoped<HelperServices>();
 
             //extensions

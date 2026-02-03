@@ -11,8 +11,8 @@
         public string Name { get; set; }
         public string CoverImageUrl { get; set; }
         public string? ReleaseDate {get; set;}
-        public string Genres { get; set; }
-        public string Platform { get; set; }
+        public string? Genres { get; set; }
+        public string? Platform { get; set; }
 
         /// edited fields
         public string? Review { get; set; }

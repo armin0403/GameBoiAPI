@@ -17,7 +17,7 @@ namespace GameBoi.Repository.Layer.Repositories
 
         public async Task<Profile> FindProfileByUserIdAsync(int? id)
         {
-            return await _dbContext.Profiles.FirstOrDefaultAsync(p => p.UserId == id);
+            return await _dbContext.Profiles.Include(p => p.User).FirstOrDefaultAsync(p => p.UserId == id);
         }
     }
 }

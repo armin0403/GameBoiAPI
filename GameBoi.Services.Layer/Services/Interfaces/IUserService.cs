@@ -1,5 +1,4 @@
-﻿
-using GameBoi.Models.Layer.DTOs;
+﻿using GameBoi.Models.Layer.DTOs.Profile;
 using GameBoi.Models.Layer.Models;
 
 namespace GameBoi.Services.Layer.Services.Interfaces

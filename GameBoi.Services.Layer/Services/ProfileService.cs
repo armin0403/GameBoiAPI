@@ -1,6 +1,8 @@
-﻿using GameBoi.Models.Layer.Models;
+﻿using GameBoi.Models.Layer.DTOs;
+using GameBoi.Models.Layer.Models;
 using GameBoi.Repository.Layer.UnitOfWork;
 using GameBoi.Services.Layer.Services.Interfaces;
+using Mapster;
 
 namespace GameBoi.Services.Layer.Services
 {

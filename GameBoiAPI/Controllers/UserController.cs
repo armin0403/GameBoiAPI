@@ -98,11 +98,18 @@ namespace GameBoiAPI.Controllers
         public async Task<IActionResult> GetCurrentUser()
         {
             var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+            var username = User.FindFirst(ClaimTypes.Name)?.Value
+                            ?? User.Identity?.Name;
 
             if (userId == null)
                 return Unauthorized("User id is null.");
-           
-            return Ok($"Authenticated user ID: {userId}");
+
+            return Ok(new
+            {
+                id = userId,
+                username = username
+            });
+
         }
 
         [Authorize]

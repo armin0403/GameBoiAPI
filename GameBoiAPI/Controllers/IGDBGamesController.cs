@@ -29,20 +29,20 @@ namespace GameBoiAPI.Controllers
         }
 
         [HttpGet("popular-games")]
-        public async Task<IActionResult> GetPopularGames()
+        public async Task<IActionResult> GetPopularGames(int pageNumber = 1, int pageSize = 20)
         {
-            var games = await _igdbGameService.GetPopularGamesAsync();
+            var games = await _igdbGameService.GetPopularGamesAsync(pageSize, pageNumber);
             return Ok(games);
         }
 
         [HttpGet("search-games")]
-        public async Task<IActionResult> SearchGames(string? searchTerm)
+        public async Task<IActionResult> SearchGames(string searchTerm, int pageNumber = 1, int pageSize = 20)
         {
             if (string.IsNullOrWhiteSpace(searchTerm))
             {
-                return Ok(await _igdbGameService.GetPopularGamesAsync());
+                return Ok(await _igdbGameService.GetPopularGamesAsync(pageSize, pageNumber));
             }
-            return Ok(await _igdbGameService.SearchGames(searchTerm));
+            return Ok(await _igdbGameService.SearchGames(searchTerm, pageSize, pageNumber));
         }
     }
 }

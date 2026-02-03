@@ -10,12 +10,7 @@
         public string PasswordHash { get; set; }
         public string PasswordSalt { get; set; }
         public DateTime DateOfBirth { get; set; }
-        public string Country { get; set; }
-
-        public string? Gamertag { get; set; }
-        public string? FavPlatform { get; set; }
-        public string? FavGenre { get; set; }
-
+        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
         public Profile Profile { get; set; }
 
     }

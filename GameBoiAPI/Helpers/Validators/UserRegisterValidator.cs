@@ -17,7 +17,6 @@ namespace GameBoiAPI.Validators
             RuleFor(x => x.Password).Length(8,18).NotEmpty();
             RuleFor(x => x.ReTypePassword).NotEmpty().Equal(x => x.Password);
             RuleFor(x => x.DateOfBirth).Must(BeAtLeast18yOld).NotEmpty();
-            RuleFor(x => x.Country).NotEmpty();            
         }
 
         private bool BeAtLeast18yOld(DateTime dateOfBirth)

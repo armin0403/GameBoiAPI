@@ -62,23 +62,7 @@ namespace GameBoiAPI.Controllers
                 return Unauthorized("User id is null.");
 
             return Ok($"Authenticated user ID: {userId}");
-        }
-
-        ///this needs work once you sync it with app///
-        [HttpPut("update-profile")]
-        public async Task<IActionResult> UpdateProfile(UpdateProfileDto profileDto)
-        {
-            var userId = _currentUserService.UserId;
-
-            var userDto = await _userService.GetUserById(userId.Value);
-            if (userDto == null)
-                return NotFound("User not found.");
-
-            var user = _mapper.Map<User>(userDto);
-            await _unitOfWork.SaveChangesAsync();
-
-            return Ok("Changes saved.");
-        }
+        }      
 
         [HttpPut("change-email")]
         public async Task<IActionResult> ChangeEmail(ChangeEmailDto emailDto)

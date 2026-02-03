@@ -1,5 +1,5 @@
 ﻿using System.Security.Claims;
-using GameBoi.Models.Layer.DTOs;
+using GameBoi.Models.Layer.DTOs.Profile;
 using GameBoi.Models.Layer.Models;
 using GameBoi.Repository.Layer.UnitOfWork;
 using GameBoi.Services.Layer.Services.Interfaces;

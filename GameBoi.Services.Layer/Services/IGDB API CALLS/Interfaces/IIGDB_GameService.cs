@@ -5,7 +5,7 @@ namespace GameBoi.Services.Layer.Services.IGDB_API_CALLS.Interfaces
 {
     public interface IIGDB_GameService
     {
-        Task<List<MyGameDto>> GetPopularGamesAsync();
-        Task<List<MyGameDto>> SearchGames(string searchTerm);
+        Task<List<IGDBGameDto>> GetPopularGamesAsync(int pageSize = 20, int pageNumber = 1);
+        Task<List<IGDBGameDto>> SearchGames(string searchTerm, int pageSize = 20, int pageNumber = 1);
     }
 }

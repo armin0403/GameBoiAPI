@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using GameBoi.Models.Layer.Models;
+﻿using GameBoi.Models.Layer.Models;
 
 namespace GameBoi.Repository.Layer.Repositories.Interfaces
 {
